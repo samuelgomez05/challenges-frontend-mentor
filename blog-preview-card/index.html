@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Blog preview card</title>
+  <link rel="stylesheet" href="./src/css/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+</head>
+<body class="bg-yellow">
+  <div class="h-dvh flex items-center justify-center p-6">
+    <article class="max-w-96 flex flex-col gap-6 rounded-[1.25rem] border border-gray-950 bg-white p-6 shadow-[8px_8px_0px_0px_#000]">
+      <figure class="aspect-[112/67] overflow-hidden rounded-[0.625rem]">
+        <img class="size-full aspect-[112/67] object-cover object-center" src="./src/assets/images/illustration-article.svg" alt="Illustration article">
+      </figure>
+      <div class="flex flex-col items-start gap-3 text-gray-950">
+        <span class="bg-yellow rounded-sm px-3 py-1 text-xs font-extrabold md:text-sm">Learning</span>
+        <p class="text-xs font-medium md:text-sm">Published <time datetime="2023-12-21">21 Dec 2023</time></p>
+        <a class="hover:text-yellow text-xl font-extrabold transition-colors duration-300 md:text-2xl" href="#">HTML & CSS foundations</a>
+        <p class="text-sm font-medium text-gray-500 md:text-base">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <img class="size-8 aspect-square object-cover object-center" src="./src/assets/images/image-avatar.webp" alt="Avatar Greg Hooper">
+        <p class="text-sm font-extrabold text-gray-950">Greg Hooper</p>
+      </div>
+    </article>
+  </div>
+  <div class="p-4 text-center text-xs">
+    Challenge by <a class="text-[hsl(228,_45%,_44%)]" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="text-[hsl(228,_45%,_44%)]" href="https://github.com/samuelgomez05" target="_blank">Samuel Gomez</a>.
+  </div>
+</body>
+</html>
