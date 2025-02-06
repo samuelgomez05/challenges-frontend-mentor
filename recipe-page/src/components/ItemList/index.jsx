@@ -1,6 +1,24 @@
 const ItemList = ({ title, markerColor, ordered, number, children }) => {
-  const unorderedClass = `size-1 block shrink-0 rounded-full bg-${markerColor}-800`
-  const orderedClass = `shrink-0 self-start font-bold text-${markerColor}-800`
+  let markerColorUnordered = ""
+  let markerColorOrdered = ""
+
+  switch (markerColor) {
+    case "rose":
+      markerColorUnordered = "bg-rose-800"
+      markerColorOrdered = "text-rose-800"
+      break
+    case "brown":
+      markerColorUnordered = "bg-brown-800"
+      markerColorOrdered = "text-brown-800"
+      break
+    default:
+      markerColorUnordered = "bg-stone-600"
+      markerColorOrdered = "text-stone-600"
+      break
+  }
+  
+  const unorderedClass = `size-1 block shrink-0 rounded-full ${markerColorUnordered}`
+  const orderedClass = `shrink-0 self-start font-bold ${markerColorOrdered}`
   const classItemList = ordered ? orderedClass : unorderedClass
 
   return (
