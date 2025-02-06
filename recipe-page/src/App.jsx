@@ -125,10 +125,10 @@ function App() {
           </Section>
         </div>
       </main>
-      <div class="p-4 text-center text-xs">
+      <footer class="p-4 text-center text-xs">
         Challenge by <a class="text-[hsl(228,_45%,_44%)]" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a class="text-[hsl(228,_45%,_44%)]" href="https://github.com/samuelgomez05" target="_blank">Samuel Gomez</a>.
-      </div>
+      </footer>
     </>
   )
 }
