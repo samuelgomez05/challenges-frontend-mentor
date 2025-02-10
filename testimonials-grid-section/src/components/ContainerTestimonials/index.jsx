@@ -55,7 +55,7 @@ const ContainerTestimonials = () => {
   ]
 
   return (
-    <div className="container-testimonials grid max-w-[90rem] grid-cols-1 gap-6 lg:gap-8">
+    <div className="container-testimonials grid max-w-[68.75rem] grid-cols-1 gap-6 lg:gap-8">
       {
         testimonials.map(({ name, text, summary, paragraph, image, styles }, index) => {
           return (
