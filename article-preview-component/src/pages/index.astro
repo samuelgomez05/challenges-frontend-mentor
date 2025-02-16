@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout>
+  <main class="min-h-svh bg-light-grayish-blue flex items-center justify-center px-6 py-20">
+    <article class="max-w-96 rounded-xl bg-white font-medium shadow-md md:flex md:max-w-3xl">
+      <figure class="aspect-video overflow-hidden rounded-t-xl md:aspect-auto md:rounded-l-xl md:rounded-t-none">
+        <img class="size-full object-cover object-center md:object-left" src="/images/drawers.jpg" alt="Drawers" />
+      </figure>
+      <div>
+        <div class="mb:gap-6 flex flex-col gap-4 p-8 pb-4 md:pb-6">
+          <h1 class="text-very-dark-grayish-blue font-bold md:text-xl">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+          <p class="text-desaturated-dark-blue text-sm">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+        </div>
+        <footer id="footer" class="flex h-[74px] items-center justify-between gap-4 px-8 py-4 md:py-0 md:pb-8">
+          <div id="author" class="flex items-center gap-4">
+            <img class="size-10 rounded-full object-cover object-center" src="/images/avatar-michelle.jpg" alt="Michelle Appleton" />
+            <div class="text-sm">
+              <p class="text-very-dark-grayish-blue font-bold">Michelle Appleton</p>
+              <time class="text-desaturated-dark-blue" datetime="2020-06-28">28 Jun 2020</time>
+            </div>
+          </div>
+          <div class="flex items-center justify-between gap-4 md:relative">
+            <div id="options" class="md:bg-very-dark-grayish-blue md:after:size-6 md:after:border-very-dark-grayish-blue hidden items-center gap-4 md:absolute md:-right-8 md:-top-20 md:w-max md:rounded-xl md:px-8 md:py-4 md:after:absolute md:after:-bottom-6 md:after:right-9 md:after:border-l-[12px] md:after:border-r-[12px] md:after:border-t-[12px] md:after:border-l-transparent md:after:border-r-transparent lg:right-1/2 lg:translate-x-1/2 lg:after:right-1/2 lg:after:translate-x-1/2">
+              <p class="text-desaturated-dark-blue text-sm font-bold uppercase tracking-[5px]">Share</p>
+              <button class="cursor-pointer transition-transform duration-300 hover:scale-125">
+                <img src="/images/icon-facebook.svg" alt="Icon facebook" />
+              </button>
+              <button class="cursor-pointer transition-transform duration-300 hover:scale-125">
+                <img src="/images/icon-twitter.svg" alt="Icon twitter" />
+              </button>
+              <button class="cursor-pointer transition-transform duration-300 hover:scale-125">
+                <img src="/images/icon-pinterest.svg" alt="Icon pinterest" />
+              </button>
+            </div>
+            <button id="button-share" class="size-8 button-share-normal flex cursor-pointer items-center justify-center rounded-full transition-colors duration-300" aria-label="Open the options to share">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="currentColor" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+            </button>
+          </div>
+        </footer>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    const footer = document.querySelector('#footer');
+    const buttonShare = document.querySelector('#button-share');
+    const author = document.querySelector('#author');
+    const options = document.querySelector('#options');
+    const containerOptions = options?.parentElement;
+    
+    buttonShare?.addEventListener('click', () => {
+      options?.classList.toggle('flex');
+      options?.classList.toggle('hidden');
+      buttonShare?.classList.toggle('button-share-normal');
+      buttonShare?.classList.toggle('button-share-clicked');
+
+      /* Only for mobile */
+      if (!(window.innerWidth >= 768)) {
+        footer?.classList.toggle('bg-very-dark-grayish-blue');
+        author?.classList.toggle('hidden');
+        containerOptions?.classList.toggle('w-full');
+      }
+    })
+
+    /* Only for desktop - close the options when clicking outside */
+    if (window.innerWidth >= 768) {
+      window.addEventListener('click', (e) => {
+        if (!containerOptions?.contains(e.target) && options?.classList.contains('flex')) {
+          options?.classList.remove('flex');
+          options?.classList.add('hidden');
+          buttonShare?.classList.remove('button-share-clicked');
+          buttonShare?.classList.add('button-share-normal');
+        }
+      });
+    }
+  </script>
+</Layout>

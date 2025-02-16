@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --color-desaturated-dark-blue: hsl(214, 17%, 51%);
+  --color-grayish-blue: hsl(212, 23%, 69%);
+  --color-light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+@layer base {
+  html {
+    font-family: "Manrope", sans-serif;
+  }
+}
+
+@layer components {
+  .button-share-normal {
+    @apply bg-light-grayish-blue text-desaturated-dark-blue hover:bg-desaturated-dark-blue hover:text-light-grayish-blue;
+  }
+
+  .button-share-clicked {
+    @apply bg-desaturated-dark-blue text-light-grayish-blue hover:bg-light-grayish-blue hover:text-desaturated-dark-blue;
+  }
+}
