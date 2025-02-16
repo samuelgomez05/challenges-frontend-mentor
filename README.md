@@ -21,6 +21,7 @@ Los desafíos los hice siguiendo las rutas de aprendizaje y challenges de Fronte
 | **Product Preview Card Component** | `product-preview-card-component` | [🔗 Demo](https://product-preview-card-component-ochre-gamma.vercel.app/) | React, Styled Components |
 | **Four Card Feature Section** | `four-card-feature-section` | [🔗 Demo](https://four-card-feature-section-livid-iota.vercel.app/) | React, Tailwind CSS |
 | **Testimonials Grid Section** | `testimonials-grid-section` | [🔗 Demo](https://testimonials-grid-section-zeta-six.vercel.app/) | React, Tailwind CSS |
+| **Article Preview Component** | `article-preview-component` | [🔗 Demo](https://article-preview-component-omega-vert.vercel.app/) | Astro, Tailwind CSS |
 
 😅 *Si lo se, mucho Tailwind, pero es que la versión 4 es simplemente god xd*  
 
