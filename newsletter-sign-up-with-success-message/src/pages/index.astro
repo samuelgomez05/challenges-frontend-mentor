@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Form from '../components/Form.astro';
+---
+
+<Layout>
+  <article class="bg-theme-white md:rounded-4xl flex max-w-[23.4375rem] flex-col shadow-xl md:max-w-4xl md:flex-row-reverse md:items-center">
+    <picture class="aspect-[375/284] md:aspect-[400/593] md:p-6 md:pl-0">
+      <source srcset="/assets/images/illustration-sign-up-desktop.svg" media="(min-width: 768px)" />
+      <img class="aspect-[375/284] md:aspect-[400/593]" src="/assets/images/illustration-sign-up-mobile.svg" alt="Illustration sign-up" />
+    </picture>
+    <div class="flex flex-col gap-6 px-6 py-10 md:px-16 md:py-6">
+      <h1 class="text-theme-blue-800 text-4xl font-bold lg:text-5xl">Stay updated!</h1>
+      <p class="text-theme-blue-700">Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul class="text-theme-blue-700 space-y-4">
+        <li class="flex items-start gap-4">
+          <img class="shrink-0" src="/assets/images/icon-list.svg" alt="Icon list" aria-hidden="true" />
+          Product discovery and building what matters
+        </li>
+        <li class="flex items-start gap-4">
+          <img class="shrink-0" src="/assets/images/icon-list.svg" alt="Icon list" aria-hidden="true" />
+          Measuring to ensure updates are a success
+        </li>
+        <li class="flex items-start gap-4">
+          <img class="shrink-0" src="/assets/images/icon-list.svg" alt="Icon list" aria-hidden="true" />
+          And much more!
+        </li>
+      </ul>
+      <Form/>
+    </div>
+  </article>
+</Layout>

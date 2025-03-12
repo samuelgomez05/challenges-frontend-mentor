@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-theme-red: hsl(4, 100%, 67%);
+  --color-theme-blue-800: hsl(234, 29%, 20%);
+  --color-theme-blue-700: hsl(235, 18%, 26%);
+  --color-theme-grey: hsl(0, 0%, 58%);
+  --color-theme-white: hsl(0, 0%, 100%);
+  --color-theme-orange: hsl(14, 100%, 61%);
+}
+
+@layer base {
+  html {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-theme-blue-800 text-theme-white disabled:bg-theme-blue-700 w-full cursor-pointer rounded-lg px-6 py-4 font-bold transition-colors duration-300 disabled:cursor-not-allowed hover:from-theme-red hover:to-theme-orange hover:bg-gradient-to-r hover:from-60% hover:to-100% hover:shadow-xl hover:shadow-theme-red/50 hover:disabled:from-theme-blue-700 hover:disabled:to-theme-blue-700 hover:disabled:shadow-none;
+  }
+
+  .label-error {
+    @apply text-theme-red!;
+  }
+
+  .input-error {
+    @apply bg-theme-red/15 !border-theme-red text-theme-red!;
+  }
+}

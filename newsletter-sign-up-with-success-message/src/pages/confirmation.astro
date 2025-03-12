@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <article class="bg-theme-white md:rounded-4xl min-h-dvh md:min-h-auto flex max-w-[23.4375rem] flex-wrap justify-center gap-8 px-6 py-10 shadow-xl md:max-w-[31.25rem] md:p-16">
+    <div class="flex w-full grow flex-col gap-6 pt-24 md:pt-0">
+      <img class="size-16" src="/assets/images/icon-success.svg" alt="Icon success" />
+      <h1 class="text-theme-blue-800 text-4xl font-bold lg:text-5xl">Thanks for subscribing!</h1>
+      <p class="text-theme-blue-700">A confirmation email has been sent to <span class="font-bold" id="view-email"></span>. Please open it and click the button inside to confirm your subscription.</p>
+    </div>
+    <button class="btn-primary self-end">Dismiss message</button>
+  </article>
+</Layout>
+
+<script>
+  const button = document.querySelector('button');
+
+  button?.addEventListener('click', () => {
+    window.location.href = '/';
+  })
+
+  /* View the email */
+  const email = sessionStorage.getItem('email');
+  const emailElement = document.querySelector('#view-email');
+
+  if (emailElement) {
+    email !== null ? emailElement.textContent = email : emailElement.textContent = 'email not found, please try again';
+  }
+</script>
