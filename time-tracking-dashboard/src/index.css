@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-theme-primary-purple: hsl(246, 80%, 60%);
+  --color-theme-primary-orange-work: hsl(15, 100%, 70%);
+  --color-theme-primary-blue-play: hsl(195, 74%, 62%);
+  --color-theme-primary-pink-study: hsl(348, 100%, 68%);
+  --color-theme-primary-green-exercise: hsl(145, 58%, 55%);
+  --color-theme-primary-purple-social: hsl(264, 64%, 52%);
+  --color-theme-primary-yellow-self-care: hsl(43, 84%, 65%);
+  --color-theme-neutral-navy-950: hsl(226, 43%, 10%);
+  --color-theme-neutral-navy-900: hsl(235, 46%, 20%);
+  --color-theme-neutral-purple-500: hsl(235, 45%, 61%);
+  --color-theme-neutral-navy-200: hsl(236, 100%, 87%);
+}
+
+@layer base {
+  html {
+    font-family: 'Rubik Variable', sans-serif;
+  }
+}
+
+@layer components {
+  .nav-button.active {
+    color: white;
+  }
+}
