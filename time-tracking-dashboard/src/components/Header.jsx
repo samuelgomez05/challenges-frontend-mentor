@@ -15,7 +15,7 @@ const Header = ({ selectedTimeframe, setSelectedTimeframe }) => {
         </div>
       </div>
       <nav className="px-8 py-6">
-        <ul className="text-theme-neutral-purple-500 flex justify-between text-lg md:flex-col md:gap-3">
+        <ul className="text-theme-neutral-purple-500 flex justify-between text-lg lg:flex-col md:gap-3">
           <li>
             <button
               className={`nav-button hover:text-white cursor-pointer transition-colors duration-300 ${

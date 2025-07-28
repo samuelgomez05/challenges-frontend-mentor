@@ -34,13 +34,13 @@ function App() {
   };
 
   return (
-    <div className="bg-theme-neutral-navy-950">
-      <main className="grid grid-cols-1 gap-6 px-6 py-20 md:grid-cols-3 lg:grid-cols-4 lg:gap-8 max-w-6xl mx-auto">
+    <div className="bg-theme-neutral-navy-950 lg:h-screen lg:flex lg:items-center lg:justify-center lg:overflow-hidden">
+      <main className="grid grid-cols-1 gap-6 px-6 py-20 lg:grid-cols-4 lg:gap-8 max-w-6xl mx-auto">
         <Header
           selectedTimeframe={selectedTimeframe}
           setSelectedTimeframe={setSelectedTimeframe}
         />
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 md:col-span-2 lg:col-span-3 lg:gap-8">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:col-span-3 lg:gap-8">
           {data.map((tracking, index) => {
             const { backgroundColor, icon } = styleCards[tracking.title];
 

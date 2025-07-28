@@ -15,8 +15,8 @@ const Card = ({ data, backgroundColor, icon, selectedTimeframe }) => {
       />
       <div className="bg-theme-neutral-navy-900 text-theme-neutral-navy-200 relative flex flex-col gap-2 md:gap-6 rounded-2xl px-6 py-7 transition-colors duration-300 hover:bg-[#34397b] cursor-pointer">
         <div className="flex justify-between gap-1 items-center">
-          <h3 className="text-lg font-medium text-white">{title}</h3>
-          <button className="cursor-pointer">
+          <h2 className="text-lg font-medium text-white">{title}</h2>
+          <button className="cursor-pointer" aria-label="More options">
             <EllipsisIcon className="fill-[#BBC0FF] hover:fill-white transition-colors duration-300" />
           </button>
         </div>
