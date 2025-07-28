@@ -24,6 +24,7 @@ Los desafíos los hice siguiendo las rutas de aprendizaje y challenges de Fronte
 | **Testimonials Grid Section**               | `testimonials-grid-section`               | [🔗 Demo](https://testimonials-grid-section-zeta-six.vercel.app/)                        | React, Tailwind CSS      |
 | **Article Preview Component**               | `article-preview-component`               | [🔗 Demo](https://article-preview-component-omega-vert.vercel.app/)                      | Astro, Tailwind CSS      |
 | **Newsletter Sign Up With Success Message** | `newsletter-sign-up-with-success-message` | [🔗 Demo](https://newsletter-sign-up-with-success-message-omega.vercel.app/)             | Astro, Tailwind CSS      |
+| **Time Tracking Dashboard**                 | `time-tracking-dashboard`                 | [🔗 Demo](https://time-tracking-dashboard-blush-zeta.vercel.app/)                        | React, Tailwind CSS      |
 
 😅 _Si lo se, mucho Tailwind, pero es que la versión 4 es simplemente god xd_
 
