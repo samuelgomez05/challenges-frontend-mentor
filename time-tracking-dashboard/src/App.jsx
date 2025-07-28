@@ -4,7 +4,7 @@ import Card from './components/Card.jsx';
 import data from './data/data.json';
 
 function App() {
-  const [selectedTimeframe, setSelectedTimeframe] = useState('daily');
+  const [selectedTimeframe, setSelectedTimeframe] = useState('weekly');
 
   const styleCards = {
     Work: {
