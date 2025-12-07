@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-theme-green-400: hsl(172, 67%, 45%);
+  --color-theme-green-900: hsl(183, 100%, 15%);
+  --color-theme-grey-500: hsl(186, 14%, 43%);
+  --color-theme-grey-400: hsl(184, 14%, 56%);
+  --color-theme-grey-200: hsl(185, 41%, 84%);
+  --color-theme-grey-50: hsl(189, 47%, 97%);
+}
+
+html {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+input[type="number"] {
+
+  /* Remove the spin buttons in number input fields for different browsers */
+  /* Chrome, Safari, Edge, Opera */
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.tip-button[data-selected="true"] {
+  color: var(--color-theme-green-900);
+  background-color: var(--color-theme-green-400);
+}
+
+#reset-calculator.active {
+  background-color: var(--color-theme-green-400);
+  cursor: pointer;
+}
+
+.group-input:has(.invalid) span {
+  display: block;
+}
+
+#people.invalid {
+  @apply ring-2 ring-red-400;
+}

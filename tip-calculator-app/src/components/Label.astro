@@ -1,0 +1,8 @@
+---
+const { id, label } = Astro.props;
+---
+
+<div class="relative group-input">
+  <label class="mb-2 block text-theme-grey-500" for={id}>{label}</label>
+  <slot />
+</div>
